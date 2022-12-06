@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<hr> <!-- Horizontal Row -->
+<h2>List of Customer Shares</h2>
+<table border="1">
+	<!-- tr: Table Row -->
+	<tr>
+		<!-- Table Header -->
+		<th>Customer ID</th>
+		<th>Share Name</th>
+		<th>Share Type</th>
+		<th>Market Price</th>
+		<th>Quantity</th>
+		<th>Total Price</th>
+		
+	</tr>
+	<tr th:each="customerServiceShareDetails : ${detailsList}">
+	<!-- table data -->
+		<td th:text="${customerServiceShareDetails.customerId}"></td>
+		<td th:text="${customerServiceShareDetails.shareName}"></td>
+		<td th:text="${customerServiceShareDetails.shareType}"></td>
+		<td th:text="${customerServiceShareDetails.marketPrice}"></td>
+		<td th:text="${customerServiceShareDetails.quantity}"></td>
+		<td th:text="${customerServiceShareDetails.total}"></td>
+		
+		
+	</tr>
+</table>
+<br><br>
+</body>
+</html>
