@@ -1,0 +1,21 @@
+package com.maria.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Share {
+	
+	@Id
+	private int shareId;
+	private String shareName;
+	private double marketPrice;
+
+}
